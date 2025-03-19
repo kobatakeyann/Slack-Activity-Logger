@@ -1,0 +1,10 @@
+{
+	"java.format.enabled": true,
+	"java.format.settings.url": ".vscode/eclipse-java-google-style.xml",
+	"java.format.settings.profile": "GoogleStyle",
+	"editor.formatOnSave": true,
+	"[java]": {
+		"editor.insertSpaces": true
+	},
+	"java.configuration.updateBuildConfiguration": "interactive"
+}
