@@ -1,1 +1,2 @@
 slack.api.token=YOUR_SLACK_API_KEY
+active.user.threshold.in.unix.time=1680316800
