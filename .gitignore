@@ -35,3 +35,6 @@ out/
 
 ### env ###
 /src/main/resources/application.properties
+
+### Log File ###
+src/main/resources/data/daily_activity_log.csv
