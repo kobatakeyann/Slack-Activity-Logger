@@ -1,4 +1,4 @@
-package com.suu.hppa.slack_activity_logger.service;
+package com.suu.hppa.slack_activity_logger.service.log;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -8,13 +8,15 @@ import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import org.springframework.stereotype.Component;
 import com.suu.hppa.slack_activity_logger.model.User;
 
+@Component
 public class ActivityStatusLogger {
     private static final Path ACTIVITY_LOG_PATH =
             Path.of("src/main/resources/data/daily_activity_log.csv");
 
-    public void writeUserStatus(List<User> users) {
+    public static void writeUserStatus(List<User> users) {
         boolean isExist = Files.exists(ACTIVITY_LOG_PATH);
         try (BufferedWriter writer = Files.newBufferedWriter(ACTIVITY_LOG_PATH,
                 StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
@@ -35,7 +37,7 @@ public class ActivityStatusLogger {
         }
     }
 
-    public void clearLog() {
+    public static void clearLog() {
         try {
             Files.deleteIfExists(ACTIVITY_LOG_PATH);
         } catch (IOException e) {

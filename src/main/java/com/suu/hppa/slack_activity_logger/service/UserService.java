@@ -4,13 +4,17 @@ import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.springframework.stereotype.Service;
+
 import com.suu.hppa.slack_activity_logger.api.ApiClient;
 import com.suu.hppa.slack_activity_logger.api.TokenManager;
 import com.suu.hppa.slack_activity_logger.model.User;
 import com.suu.hppa.slack_activity_logger.util.PropertyGetter;
 
+@Service
 public class UserService {
     private final static String SLACK_API_TOKEN = TokenManager.getSlackApiToken();
     private final static List<JSONObject> ALL_USERS = fetchAllUsers();
