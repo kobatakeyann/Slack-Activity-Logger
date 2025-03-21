@@ -1,2 +1,4 @@
+spring.application.name=slack-activity-logger
 slack.api.token=YOUR_SLACK_API_KEY
-active.user.threshold.in.unix.time=1680316800
+slack.channel.id=SLACK_CHANNEL_ID
+active.user.threshold.in.unix.time=0
